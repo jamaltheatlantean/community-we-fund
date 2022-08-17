@@ -1,0 +1,6 @@
+node_modules
+.env
+deployments
+cache
+artifacts
+test/unit
