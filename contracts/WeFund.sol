@@ -28,10 +28,6 @@ contract WeFund {
         bytes data;
     }
 
-    Benefactor[] private s_benefactors;
-    mapping(address => bool) public s_isBenefactor;
-    mapping(address => bool) public s_contributed; // checks if benefactor has s_contributed
-
     // details of a request
     struct Request {
         string reason;
@@ -40,8 +36,12 @@ contract WeFund {
         bytes data;
         bool granted;
     }
-
+    
+    Benefactor[] private s_benefactors;
     Request[] public requests; // store requests
+    
+    mapping(address => bool) public s_isBenefactor;
+    mapping(address => bool) public s_contributed; // checks if benefactor has s_contributed
 
     mapping(uint => mapping(address => bool)) public s_approved;
     mapping(address => uint256) private s_totalAmountContributed;
