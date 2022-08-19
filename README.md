@@ -16,24 +16,74 @@ community approves of the individuals reason then they get the funds transferred
   npm install npm@latest -g
   ```
   
-  ### Installation
-  Get a free API Key at https://alchemyapi.io
+### Installation
+  i. Get a free API Key at https://alchemyapi.io
   
-  2. Clone the repo
+  ii. Clone the repo
    ```sh
    git clone https://github.com/jamaltheatlantean/community-we-fund.git
    ```
-   3. Install NPM packages
+   iii. Install NPM packages
    ```sh
    npm install
    ```
-   4. Enter your API in `config.js`
+   iv. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
    
-   ## Usage
-   1.) Keep a community registry.
-   2.) Boost community funding.
-   3.) Safely store community funds on the block-chain.
-   4.) Loan ETH to community members
+### Deploy on rinkeby testnet
+  ```
+  npx hardhat deploy --network rinkeby
+  ```
+  
+  You can get some rinkeby faucet by following steps:
+  
+  i. Go to https://faucets.chain.link/rinkeby                                                                                                               
+  ii. Connect your wallet                                                                                                                                   
+  iii. Copy and Paste your address.                                                                                                                         
+  iv. Pass the Captcha.                                                                                                                                     
+  v. Click on send request and wait confirmation.                                                                                                           
+  
+  
+   
+ ## Usage
+ 
+1.) Keep a community registry                                                                                                                               
+2.) Boost community savings                                                                                                                                 
+3.) Safely store community funds on the block-chain                                                                                                         
+4.) Loan ETH to community members in need                                                                                                                   
+  
+  
+## Project Status
+This keeps track of the feautures that aren't in the code yet.                                                                                             
+*90% complete*
+-Finish writing, and commit unit tests.
+
+
+ ## Contributing
+
+  Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+  If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag       "enhancement".
+  Don't forget to give the project a star! Thanks again!
+
+  1. Fork the Project
+  2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+  3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+  4. Push to the Branch (`git push origin feature/AmazingFeature`)
+  5. Open a Pull Request
+
+
+   
+  ## License
+
+  Distributed under the MIT License. See `LICENSE.txt` for more information.
+  
+  ## Contact
+
+Author Name - Jamal The Atlantean                                                                                                                           
+Reach me - https://twitter.com/ThatAtlantean - jamaltheatlantean@gmail.com
+
+Project Link: [https://github.com/jamaltheatlantean/community-we-fund](https://github.com/jamaltheatlantean/community-we-fund])
+  
