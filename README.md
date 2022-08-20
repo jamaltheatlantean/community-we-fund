@@ -82,7 +82,7 @@ This keeps track of the feautures that aren't in the code yet.
   
   ## Contact
 
-Author Name - Jamal The Atlantean                                                                                                                           
+Author - Jamal The Atlantean                                                                                                                           
 Reach me - https://twitter.com/ThatAtlantean - jamaltheatlantean@gmail.com
 
 Project Link: [https://github.com/jamaltheatlantean/community-we-fund](https://github.com/jamaltheatlantean/community-we-fund])
