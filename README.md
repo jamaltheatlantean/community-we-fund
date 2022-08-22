@@ -45,7 +45,7 @@ community approves of the individuals reason then they get the funds transferred
   iv. Pass the Captcha.                                                                                                                                     
   v. Click on send request and wait confirmation.                                                                                                           
   
-  Or you can test the functions on a IDE by copy, pasting, and compiling the code on Remix.ethereum.org
+  Or you can test the functions on a IDE by copy, pasting, and compiling the code on https://Remix.ethereum.org
    
  ## Usage
  
