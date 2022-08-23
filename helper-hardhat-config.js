@@ -24,8 +24,3 @@ module.exports = {
   DECIMALS,
   INITIAL_ANSWER,
 };
-
-module.exports = {
-  networkConfig,
-  developmentChains,
-}
