@@ -16,6 +16,7 @@ community approves of the individuals reason then they get the funds transferred
   npm install npm@latest -g
   ```
   
+  
 ### Installation
   i. Get a free API Key at https://alchemyapi.io
   
@@ -31,6 +32,12 @@ community approves of the individuals reason then they get the funds transferred
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
+   
+## HardHat Setup
+Install dependencies:
+```sh
+npx add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-waffle chai ethereum-waffle hardhat hardhat-contract-sizer hardhat-deploy hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage dotenv
+```
    
 ### Deploy on rinkeby testnet
   ```
