@@ -23,7 +23,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     from: deployer,
     args: [ethUsdPriceFeedAddress],
     log: true,
-    //waitConfirmations: network.config.blockConfirmations || 1,
+    waitConfirmations: network.config.blockConfirmations || 1,
   });
   log(`WeFund deployed at ${weFund.address}`);
 };
