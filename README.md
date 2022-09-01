@@ -24,19 +24,14 @@ community approves of the individuals reason then they get the funds transferred
    ```sh
    git clone https://github.com/jamaltheatlantean/community-we-fund.git
    ```
-   iii. Install NPM packages
-   ```sh
-   npm install
-   ```
+   iii. Install dependencies
+```sh
+npx save --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-waffle chai ethereum-waffle hardhat hardhat-contract-sizer hardhat-deploy hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage dotenv
+```
    iv. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
-   
-## HardHat SetupInstall dependencies:
-```sh
-npx save --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-waffle chai ethereum-waffle hardhat hardhat-contract-sizer hardhat-deploy hardhat-gas-reporter prettier prettier-plugin-solidity solhint solidity-coverage dotenv
-```
    
 ### Deploy on rinkeby testnet
   ```
@@ -89,7 +84,8 @@ This keeps track of the feautures that aren't in the code yet.
   ## Contact
 
 Author - Jamal The Atlantean                                                                                                                           
-Reach me - https://twitter.com/ThatAtlantean - jamaltheatlantean@gmail.com
+Reach me on Twitter - https://twitter.com/ThatAtlantean
+Or send me a mail - jamaltheatlantean@gmail.com
 
 Project Link: [https://github.com/jamaltheatlantean/community-we-fund](https://github.com/jamaltheatlantean/community-we-fund])
   
