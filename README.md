@@ -46,14 +46,14 @@ npx save --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers @nomic
   iv. Pass the Captcha.                                                                                                                                     
   v. Click on send request and wait confirmation.                                                                                                           
   
-  Or you can test the functions on a IDE by copy, pasting, and compiling the code on https://Remix.ethereum.org
+  Or you can test the functions on an IDE by copy, pasting, and compiling the code on https://Remix.ethereum.org
    
  ## Usage
  
 1.) Keep a community registry                                                                                                                               
 2.) Boost community savings                                                                                                                                 
 3.) Safely store community funds on the block-chain                                                                                                         
-4.) Loan ETH to community members in need                                                                                                                   
+4.) Loan ETH to community members in need                                                                                                                    
   
   
 ## Project Status
