@@ -24,12 +24,13 @@ community approves of the individuals reason then they get the funds transferred
    ```sh
    git clone https://github.com/jamaltheatlantean/community-we-fund.git
    ```
-   iii. Install npm
+   iii. Install npm                                                                                                                                     
     ```
     npm install
     ```
+                                                                                                                                                           
    iv. Enter your API in `config.js`
-   ```js
+   ```sh
    const API_KEY = 'ENTER YOUR API';
    ```
    
