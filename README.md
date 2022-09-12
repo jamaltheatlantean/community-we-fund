@@ -1,15 +1,19 @@
 ## A COMMUNITY FUNDING CONTRACT
-I created this contract as one(1) of six(6) projects to help boost close community/organizational funding, for the purpose of granting loans to it's members.
-
-One of it's purpose is to be simple, transparent and easy to use.
+I created this contract as one of six projects that i came up with after i was confident enough and ready to start building dApps that'll go on the block-chain.                                                                                                                                                     
+I built it to help boost close community/organizational funding, for the purpose of granting loans to it's members so one of it's purpose is to be simple, transparent and easy to use.
 
 Community members are assigned the role of Benefactor, and to ensure that everyone is ready to commit to funding as a community they are required to pay a registration
 fee that gets stored in the contract.
-The community can agree upon an agreed interval for funding(weekly/monthly/yearly) and if a member of the community was in need of funding
+The community can agree upon an agreed interval for group funding(weekly/monthly/yearly) and if a member of the community was in need of funding
 they will simply make a request to have a certain amount of funds transferred from the community funds to them. If more than half of the 
-community approves of the individuals reason then they get the funds transferred to them by calling the execute function hardcoded.
+community approves of the individuals reason then they get the funds transferred to them by calling the execute function hardcoded.                        
 
-## Getting Started
+## BUILDING THE DAPP
+
+It was fun to build and get creative in creating this dApp by combining a few things i had learned throughout my learning curve, and although i barely had any challenges during the build, i got stuck at the execute function, which is designd to pay the amount of ETH requested for loan. For some reason it wasn't paying the address that had made a request. I had this problem for two days, and no stack overflow wasn't helpful, as i had received more than 25 views yet no response. Maybe i asked the question wrongly, but i wasn't going to let that slow me down, so i turned to a friend and showed him the code. We spent the next three days looking for a solution, and in that time we found the need to implement more logic to the function. Shortly after we found that my original code wasn't processing the amount of approvals needed before ETH could be sent, and he came up with a solution. We got it functioning then cleaned up the code and got it ready to be pushed to github.
+
+
+## Getting Started on this project
 ### Prerequisites
 * npm
   ```sh
