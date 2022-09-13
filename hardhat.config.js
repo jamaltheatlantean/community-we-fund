@@ -33,10 +33,6 @@ module.exports = {
       blockConfirmations: 6,
     },
   },
-  gasReporter: {
-    enabled: process.env.REPORT_GAS !== undefined,
-    currency: "USD",
-  },
   namedAccounts: {
     deployer: {
       default: 0,
