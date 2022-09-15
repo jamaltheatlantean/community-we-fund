@@ -27,7 +27,6 @@ contract WeFund {
         bytes data;
     }
 
-    // details of a request
     struct Request {
         string reason;
         uint value;
