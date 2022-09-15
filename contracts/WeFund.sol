@@ -21,7 +21,6 @@ contract WeFund {
     event RequestApproved(address indexed benefactor, uint indexed requestId);
     event RequestExecuted(address indexed benefactor, uint indexed requestId);
 
-    // save contributor details
     struct Benefactor {
         address addr;
         string name;
