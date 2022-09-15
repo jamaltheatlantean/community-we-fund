@@ -92,7 +92,7 @@ contract WeFund {
             msg.value.getConversionRate(s_priceFeed) >= AMOUNT_TO_REGISTER,
             "not enough ether"
         );
-        require(maximumNumOfBenefactors != s_benefactors.length); // look into this logic
+        require(maximumNumOfBenefactors != s_benefactors.length); 
         s_benefactors.push(
             Benefactor({addr: msg.sender, name: _name, data: _data})
         );
