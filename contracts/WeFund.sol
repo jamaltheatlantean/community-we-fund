@@ -39,7 +39,7 @@ contract WeFund {
     Request[] public requests; // store requests
     
     mapping(address => bool) public s_isBenefactor;
-    mapping(address => bool) public s_contributed; // checks if benefactor has s_contributed
+    mapping(address => bool) public s_contributed; // checks if benefactor has contributed
 
     mapping(uint => mapping(address => bool)) public s_approved;
     mapping(address => uint256) private s_totalAmountContributed;
@@ -76,7 +76,7 @@ contract WeFund {
 
     AggregatorV3Interface private s_priceFeed;
 
-    // set to 6 since the contract only supports 10 s_benefactors
+    // set to 6 since the contract only supports 10 benefactors
     constructor(address priceFeed) {
         s_priceFeed = AggregatorV3Interface(priceFeed);
         i_owner = msg.sender;
