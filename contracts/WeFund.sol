@@ -50,7 +50,7 @@ contract WeFund {
     uint256 public constant MINIMUM_DONATION = 50 * 1e18; // minimum donation is $50
     uint256 public constant AMOUNT_TO_REGISTER = 5 * 1e18; // amount to register is $5
 
-    uint8 public maximumNumOfBenefactors = 50; // declare max benefactors
+    uint8 public maximumNumOfBenefactors = 50; // max benefactors
 
     modifier onlyBenefactor() {
         if (!s_isBenefactor[msg.sender]) {
