@@ -55,7 +55,6 @@ contract WeFund {
     modifier onlyBenefactor() {
         if (!s_isBenefactor[msg.sender]) {
             revert WeFund__NotBenefactorError();
-        }
         _;
     }
 
