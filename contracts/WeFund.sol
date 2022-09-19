@@ -110,7 +110,7 @@ contract WeFund {
     }
 
     function submitLoanRequest(
-        string memory reason,
+        string memory _reason,
         address payable _to,
         uint _value,
         bytes calldata _data
@@ -118,7 +118,7 @@ contract WeFund {
         uint requestId = requests.length;
         requests.push(
             Request({
-                reason: reason,
+                reason: _reason,
                 to: _to,
                 value: _value,
                 data: _data,
