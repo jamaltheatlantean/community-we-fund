@@ -7,7 +7,7 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 // Errors
 error WeFund__NotBenefactorError();
 
-// Interfaces, Libraries, contract
+// Interfaces, Libraries, Contract
 /** @title A contract for close community crowd funding
  * @author Jamal'TheAtlantean
  * @dev The contract implements Price Feeds as a library
