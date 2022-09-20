@@ -12,13 +12,12 @@ module.exports = {
   solidity: {
     compilers: [{ version: "0.8.12" }, { version: "0.6.6" }],
   },
-
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {
       chainId: 31337,
     },
-    rinkeby: {
+    goerli: {
       url: RINKEBY_RPC_URL,
       accounts: [PRIVATE_KEY],
       chainId: 5,
