@@ -85,11 +85,6 @@ This keeps track of the feautures that aren't in the code yet.
   4. Push to the Branch (`git push origin feature/AmazingFeature`)
   5. Open a Pull Request
 
-
-   
-  ## License
-
-  Distributed under the MIT License. See `LICENSE.txt` for more information.
   
   ## Contact
 
