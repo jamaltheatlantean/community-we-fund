@@ -94,7 +94,7 @@ This keeps track of the feautures that aren't in the code yet.
   ## Contact
 
 Author - Jamal The Atlantean                                                                                                                           
-Reach me on Twitter - https://twitter.com/ThatAtlantean
+Reach me on [Twitter](https://twitter.com/ThatAtlantean)
 Or send me a mail - jamaltheatlantean@gmail.com
 
 Project Link: [https://github.com/jamaltheatlantean/community-we-fund](https://github.com/jamaltheatlantean/community-we-fund])
