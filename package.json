@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --timeout 10000000",
-    "test:staging": "npx hardhat test --network rinkeby",
+    "test:staging": "npx hardhat test --network goerli",
     "lint": "npx solhint 'contracts/*sol'",
     "lint:fix": "npx solhint 'contracts/*sol' --fix",
     "format": "npx prettier --write .",
