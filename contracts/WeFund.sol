@@ -94,7 +94,7 @@ contract WeFund {
         s_benefactors.push(
             Benefactor({addr: msg.sender, name: _name, data: _data})
         );
-        s_isBenefactor[msg.sender] = true;
+        isBenefactor[msg.sender] = true;
         emit BenefactorAdded(msg.sender, _name);
     }
 
