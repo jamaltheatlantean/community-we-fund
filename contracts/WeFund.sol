@@ -14,12 +14,21 @@ error WeFund__NotBenefactorError();
  */
 contract WeFund {
     using PriceConverter for uint256;
-
+    
+    // Events
+    
     event BenefactorAdded(address indexed sender, string name);
     event BenefactorContributed(address indexed benefactor, uint amount);
     event RequestSubmited(address indexed benefactor, uint indexed requestId);
     event RequestApproved(address indexed benefactor, uint indexed requestId);
     event RequestExecuted(address indexed benefactor, uint indexed requestId);
+    
+    address private immutable i_owner;
+    uint8 private s_approval;
+
+    uint256 public constant MINIMUM_DONATION = 50 * 1e18; // minimum donation is $50
+    uint256 public constant AMOUNT_TO_REGISTER = 5 * 1e18; // $5
+    uint8 public maximumNumOfBenefactors = 50; 
 
     struct Benefactor {
         address addr;
@@ -44,13 +53,7 @@ contract WeFund {
     mapping(uint => mapping(address => bool)) public s_approved;
     mapping(address => uint256) private s_totalAmountContributed;
 
-    address private immutable i_owner;
-    uint8 private s_approval;
 
-    uint256 public constant MINIMUM_DONATION = 50 * 1e18; // minimum donation is $50
-    uint256 public constant AMOUNT_TO_REGISTER = 5 * 1e18; // amount to register is $5
-
-    uint8 public maximumNumOfBenefactors = 50; // smaller communities are more easily managed
 
     modifier onlyBenefactor() {
         if (!s_isBenefactor[msg.sender]) {
