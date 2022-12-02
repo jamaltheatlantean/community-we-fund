@@ -29,7 +29,7 @@ contract WeFund {
 
     uint256 public constant MINIMUM_DONATION = 50 * 1e18; // $50
     uint256 public constant AMOUNT_TO_REGISTER = 5 * 1e18; // $5
-    uint8 public maximumNumOfBenefactors = 50;
+    uint8 public maximumNumOfBenefactors = 100; // @dev: can use any number needed for the community
     
     mapping(address => bool) public s_isBenefactor;
     mapping(address => bool) public s_contributed; // checks if benefactor has contributed
