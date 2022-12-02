@@ -54,9 +54,8 @@ contract WeFund {
     Benefactor[] private s_benefactors;
     Request[] public requests; // store requests
 
-
-
-
+    // Modifiers
+    
     modifier onlyBenefactor() {
         if (!s_isBenefactor[msg.sender]) {
             revert WeFund__NotBenefactorError();
