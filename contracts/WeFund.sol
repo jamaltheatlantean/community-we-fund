@@ -26,7 +26,7 @@ contract WeFund {
     address private immutable i_owner;
     uint8 private s_approval;
 
-    uint256 public constant MINIMUM_DONATION = 50 * 1e18; // minimum donation is $50
+    uint256 public constant MINIMUM_DONATION = 50 * 1e18; // $50
     uint256 public constant AMOUNT_TO_REGISTER = 5 * 1e18; // $5
     uint8 public maximumNumOfBenefactors = 50; 
 
