@@ -29,7 +29,13 @@ contract WeFund {
 
     uint256 public constant MINIMUM_DONATION = 50 * 1e18; // $50
     uint256 public constant AMOUNT_TO_REGISTER = 5 * 1e18; // $5
-    uint8 public maximumNumOfBenefactors = 50; 
+    uint8 public maximumNumOfBenefactors = 50;
+    
+    mapping(address => bool) public s_isBenefactor;
+    mapping(address => bool) public s_contributed; // checks if benefactor has contributed
+
+    mapping(uint => mapping(address => bool)) public s_approved; // stores approved requests
+    mapping(address => uint256) private s_totalAmountContributed;
 
     struct Benefactor {
         address addr;
@@ -47,12 +53,7 @@ contract WeFund {
     
     Benefactor[] private s_benefactors;
     Request[] public requests; // store requests
-    
-    mapping(address => bool) public s_isBenefactor;
-    mapping(address => bool) public s_contributed; // checks if benefactor has contributed
 
-    mapping(uint => mapping(address => bool)) public s_approved;
-    mapping(address => uint256) private s_totalAmountContributed;
 
 
 
