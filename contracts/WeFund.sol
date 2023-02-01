@@ -37,7 +37,7 @@ contract WeFund {
     mapping(address => bool) public s_contributed; // checks if benefactor has contributed
 
     mapping(uint => mapping(address => bool)) public s_approved; // stores approved requests
-    mapping(address => uint256) private s_totalAmountContributed;
+    mapping(address => uint256) private s_totalAmountContributed; // total amount contributed per address
 
     struct Benefactor {
         address addr;
