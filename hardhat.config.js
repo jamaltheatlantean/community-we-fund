@@ -12,7 +12,6 @@ module.exports = {
   solidity: {
     compilers: [{ version: "0.8.12" }, { version: "0.6.6" }],
   },
-
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {
@@ -24,10 +23,6 @@ module.exports = {
       chainId: 5,
       blockConfirmations: 6,
     },
-  },
-  gasReporter: {
-    enabled: process.env.REPORT_GAS !== undefined,
-    currency: "USD",
   },
   namedAccounts: {
     deployer: {

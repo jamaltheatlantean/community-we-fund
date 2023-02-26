@@ -1,12 +1,16 @@
 {
+<<<<<<< HEAD
   "name": "hardhat-We-Fund",
+=======
+  "name": "Community-We-Fund",
+>>>>>>> c4a8ba59bfb71e14525fe42416f2cce2fa62923e
   "author": "Jamal The Atlantean",
   "version": "1.0.0",
   "description": "A contract for community funding and loans",
   "main": "index.js",
   "scripts": {
     "test": "mocha --timeout 10000000",
-    "test:staging": "npx hardhat test --network rinkeby",
+    "test:staging": "npx hardhat test --network goerli",
     "lint": "npx solhint 'contracts/*sol'",
     "lint:fix": "npx solhint 'contracts/*sol' --fix",
     "format": "npx prettier --write .",

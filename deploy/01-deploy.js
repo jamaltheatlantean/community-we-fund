@@ -28,4 +28,8 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   log(`WeFund deployed at ${weFund.address}`);
 };
 
+<<<<<<< HEAD
 module.exports.tags = ["all", "weFund"];
+=======
+module.exports.tags = ["all", "weFund"];
+>>>>>>> c4a8ba59bfb71e14525fe42416f2cce2fa62923e
