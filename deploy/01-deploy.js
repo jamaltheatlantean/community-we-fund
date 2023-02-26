@@ -3,7 +3,6 @@ const {
   networkConfig,
   developmentChains,
 } = require("../helper-hardhat-config");
-//const { verify } = require("../utils/verify")
 
 module.exports = async ({ getNamedAccounts, deployments }) => {
   const { deploy, log } = deployments;
@@ -24,10 +23,9 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     from: deployer,
     args: [ethUsdPriceFeedAddress],
     log: true,
-    // we need to wait if on a live network so we can verify properly
-    //waitConfirmations: network.config.blockConfirmations || 1,
+    waitConfirmations: network.config.blockConfirmations || 1,
   });
   log(`WeFund deployed at ${weFund.address}`);
 };
 
-module.exports.tags = ["all", "wefund"];
+module.exports.tags = ["all", "weFund"];

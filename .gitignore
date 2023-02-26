@@ -3,4 +3,4 @@ node_modules
 deployments
 cache
 artifacts
-test/unit
+test/staging

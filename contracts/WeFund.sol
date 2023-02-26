@@ -1,38 +1,54 @@
 // SPDX-License-Identifier: MIT
+
 // Pragma
 pragma solidity ^0.8.12;
+
 // Imports
 import "./PriceConverter.sol";
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
-// Error code
+
+// Errors
 error WeFund__NotBenefactorError();
 
-// Interfaces, Libraries, contract
+// Interfaces, Libraries, Contract
 /** @title A contract for close community crowd funding
  * @author Jamal'TheAtlantean
  * @dev The contract implements Price Feeds as a library
  */
 contract WeFund {
     using PriceConverter for uint256;
-
+    
+    // Events
+    
     event BenefactorAdded(address indexed sender, string name);
     event BenefactorContributed(address indexed benefactor, uint amount);
     event RequestSubmited(address indexed benefactor, uint indexed requestId);
     event RequestApproved(address indexed benefactor, uint indexed requestId);
     event RequestExecuted(address indexed benefactor, uint indexed requestId);
+    
+    address public immutable i_owner;
+    uint8 public s_approval;
 
-    // save contributor details
+    uint256 public constant MINIMUM_DONATION = 50 * 1e18; // $50
+    uint256 public constant AMOUNT_TO_REGISTER = 5 * 1e18; // $5
+    uint8 public maximumNumOfBenefactors = 100; // @dev: can use any number needed for the community
+    
+    mapping(address => bool) public s_isBenefactor;
+    mapping(address => bool) public s_contributed; // checks if benefactor has contributed
+
+    mapping(uint => mapping(address => bool)) public s_approved; // stores approved requests
+    mapping(address => uint256) private s_totalAmountContributed; // total amount contributed per address
+
+    // Benefactor details
+    
     struct Benefactor {
         address addr;
         string name;
         bytes data;
     }
 
-    Benefactor[] private s_benefactors;
-    mapping(address => bool) public s_isBenefactor;
-    mapping(address => bool) public s_contributed; // checks if benefactor has s_contributed
-
-    // details of a request
+    // Request details
+    
     struct Request {
         string reason;
         uint value;
@@ -40,24 +56,16 @@ contract WeFund {
         bytes data;
         bool granted;
     }
-
+    
+    Benefactor[] public s_benefactors;
     Request[] public requests; // store requests
 
-    mapping(uint => mapping(address => bool)) public s_approved;
-    mapping(address => uint256) private s_totalAmountContributed;
-
-    address private immutable i_owner;
-    uint8 private s_approval;
-
-    uint256 public constant MINIMUM_DONATION = 50 * 1e18; // minimum donation is $50
-    uint256 public constant AMOUNT_TO_REGISTER = 5 * 1e18; // amount to register is $5
-
-    uint8 public maximumNumOfBenefactors = 10; // declare max s_benefactors
-
+    // Modifiers
+    
     modifier onlyBenefactor() {
         if (!s_isBenefactor[msg.sender]) {
             revert WeFund__NotBenefactorError();
-        }
+            }
         _;
     }
 
@@ -78,7 +86,6 @@ contract WeFund {
 
     AggregatorV3Interface private s_priceFeed;
 
-    // set to 6 since the contract only supports 10 s_benefactors
     constructor(address priceFeed) {
         s_priceFeed = AggregatorV3Interface(priceFeed);
         i_owner = msg.sender;
@@ -94,7 +101,7 @@ contract WeFund {
             msg.value.getConversionRate(s_priceFeed) >= AMOUNT_TO_REGISTER,
             "not enough ether"
         );
-        require(maximumNumOfBenefactors != s_benefactors.length); // look into this logic
+        require(maximumNumOfBenefactors != s_benefactors.length); 
         s_benefactors.push(
             Benefactor({addr: msg.sender, name: _name, data: _data})
         );
@@ -114,7 +121,7 @@ contract WeFund {
     }
 
     function submitLoanRequest(
-        string memory reason,
+        string memory _reason,
         address payable _to,
         uint _value,
         bytes calldata _data
@@ -122,7 +129,7 @@ contract WeFund {
         uint requestId = requests.length;
         requests.push(
             Request({
-                reason: reason,
+                reason: _reason,
                 to: _to,
                 value: _value,
                 data: _data,
