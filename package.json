@@ -1,9 +1,6 @@
 {
-<<<<<<< HEAD
   "name": "hardhat-We-Fund",
-=======
   "name": "Community-We-Fund",
->>>>>>> c4a8ba59bfb71e14525fe42416f2cce2fa62923e
   "author": "Jamal The Atlantean",
   "version": "1.0.0",
   "description": "A contract for community funding and loans",

@@ -27,14 +27,10 @@ contract WeFund {
     event RequestExecuted(address indexed benefactor, uint indexed requestId);
     
     address public immutable i_owner;
+
     uint8 public s_approval;
-
-    address private immutable i_owner;
-    uint8 private s_approval;
-
-
-    uint256 public constant MINIMUM_DONATION = 50 * 1e18; // $50
-    uint256 public constant AMOUNT_TO_REGISTER = 5 * 1e18; // $5
+    uint256 public constant MINIMUM_DONATION =  50 * 1e18; // hypothetical 
+    uint256 public constant AMOUNT_TO_REGISTER = 5 * 1e18; // hypothetical
     uint8 public maximumNumOfBenefactors = 100; // @dev: can use any number needed for the community
     
     mapping(address => bool) public s_isBenefactor;
