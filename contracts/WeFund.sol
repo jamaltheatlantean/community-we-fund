@@ -26,13 +26,12 @@ contract WeFund {
     event RequestApproved(address indexed benefactor, uint indexed requestId);
     event RequestExecuted(address indexed benefactor, uint indexed requestId);
     
-<<<<<<< HEAD
     address public immutable i_owner;
     uint8 public s_approval;
-=======
+
     address private immutable i_owner;
     uint8 private s_approval;
->>>>>>> c4a8ba59bfb71e14525fe42416f2cce2fa62923e
+
 
     uint256 public constant MINIMUM_DONATION = 50 * 1e18; // $50
     uint256 public constant AMOUNT_TO_REGISTER = 5 * 1e18; // $5
@@ -61,12 +60,8 @@ contract WeFund {
         bytes data;
         bool granted;
     }
-    
-<<<<<<< HEAD
+
     Benefactor[] public s_benefactors;
-=======
-    Benefactor[] private s_benefactors;
->>>>>>> c4a8ba59bfb71e14525fe42416f2cce2fa62923e
     Request[] public requests; // store requests
 
     // Modifiers
