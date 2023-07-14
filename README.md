@@ -65,9 +65,7 @@ It was fun to build and get creative in creating this smart contract by combinin
   
   
 ## Project Status
-This keeps track of the feautures that aren't in the code yet.                                                                                             
-*90% complete*
--Finish writing, and commit unit tests.
+This repo is no longer maintained. Contact me for any enquiries.
 
 
  ## Contributing
